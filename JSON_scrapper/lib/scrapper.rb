@@ -17,23 +17,11 @@ def get_all_the_urls_of_val_doise_townhalls
     a_links.each {|link| get_the_email_of_a_townhal_from_its_webpage(link['href']) } #Pour chaque cellule du tableau. On ne garde que le href et on l'envoie en paramètre dans la méthode "get_the_email_of_a_townhal_from_its_webpage"
 end
 
-def get_all_emails (array)
-	list_emails = Array.new
-	array.length.times do |i|
-		if i == 135
-			list_emails[i] = nil
-		else
-			list_emails[i] = get_the_email_of_a_townhal_from_its_webpage(array[i])
-		end
-	end
-	array.length.times do |i|
-		return list_emails.flatten
-	end
-end
+
 
 def perform
-  #get_all_the_urls_of_val_doise_townhalls
-  get_all_emails
+  get_all_the_urls_of_val_doise_townhalls
+  
 end
 
 perform
